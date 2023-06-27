@@ -25,7 +25,7 @@ class c_pedal:
             GPIO.setmode(GPIO.BCM)
             GPIO.setup(bPedal, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
             GPIO.add_event_detect(bPedal, GPIO.FALLING, self.pedal_counter)
-        self.timer = RepeaterTimer(1, self.reset_counter)
+        self.timer = RepeaterTimer(0.1, self.reset_counter)
         self.timer.start()
 
     def reset_counter(self):
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         print(f'Counter {p2.counter}')
         print(f'Counter {p3.counter}')
 
-        time.sleep(0.5)
+        time.sleep(0.05)
         pass
 
     p.__del__()
