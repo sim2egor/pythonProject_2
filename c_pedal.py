@@ -47,15 +47,15 @@ if __name__ == '__main__':
     bPedal = 19
     i = 0
     p = c_pedal(bPedal)
-    p2 = c_pedal(22)
-    p3 = c_pedal(44)
+    p2 = c_pedal(5)
+    p3 = c_pedal(23)
     for i in range(100000):
         p.pedal_counter()
         p2.pedal_counter()
         p3.pedal_counter()
-        print(f'Counter {p.counter}')
-        print(f'Counter {p2.counter}')
-        print(f'Counter {p3.counter}')
+        print(f'Counter1 {p.counter}')
+        print(f'Counter2 {p2.counter}')
+        print(f'Counter3 {p3.counter}')
 
         time.sleep(0.05)
         pass
