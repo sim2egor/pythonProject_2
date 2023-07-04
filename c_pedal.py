@@ -16,6 +16,7 @@ class RepeaterTimer(Timer):
 class c_pedal:
     bpedal: int
     counter: int = 0
+    value: int =0
     
 
     def __init__(self, bPedal=None) -> None:
@@ -29,9 +30,10 @@ class c_pedal:
         self.timer.start()
 
     def reset_counter(self):
+        self.value= counter
         self.counter = 0
 
-    def pedal_counter(self):
+    def pedal_counter(self,pin):
         self.counter += 1
         pass
 
@@ -50,14 +52,11 @@ if __name__ == '__main__':
     p2 = c_pedal(5)
     p3 = c_pedal(23)
     for i in range(100000):
-        p.pedal_counter()
-        p2.pedal_counter()
-        p3.pedal_counter()
-        print(f'Counter1 {p.counter}')
-        print(f'Counter2 {p2.counter}')
-        print(f'Counter3 {p3.counter}')
+        print(f'Counter1 {p.value}')
+        print(f'Counter2 {p2.value}')
+        print(f'Counter3 {p3.value}')
 
-        time.sleep(0.05)
+        time.sleep(0.5)
         pass
 
     p.__del__()
