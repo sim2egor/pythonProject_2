@@ -21,4 +21,5 @@ while True:
     print("bRight {}".format(GPIO.input(bRight)))
     print("bUP {}".format(GPIO.input(bUp)))
     print("bDown {}".format(GPIO.input(bDown)))
+    print('------------------------------------------')
     time.sleep(0.5)
