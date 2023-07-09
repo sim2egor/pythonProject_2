@@ -30,7 +30,7 @@ class c_pedal:
         self.timer.start()
 
     def reset_counter(self):
-        self.value= counter
+        self.value= self.counter
         self.counter = 0
 
     def pedal_counter(self,pin):
